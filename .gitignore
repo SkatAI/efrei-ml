@@ -1,0 +1,44 @@
+# Ignored Directories
+.ipynb_checkpoints/
+node_modules/
+data-local/
+wip/
+
+# Ignored File Types
+.~lock.*#
+*.xlsx
+*.pkl
+*.log
+*.tar.gz
+
+# Ignored Python Files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+.pytest_cache/
+.coverage
+
+
+# Ignored Configuration Files
+.env
+secrets/
+.vscode/
+.markdownlint.yaml
+
+# Ignored Miscellaneous Files
+.DS_Store
+Thumbs.db
+
+# latex
+*.aux
+*.log
+*.out
+*.tex

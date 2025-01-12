@@ -1,0 +1,232 @@
+course:
+  title: ST2MML
+  lang: english
+  sessions: 8 sessions, 3 to 4h each
+
+  Launch:
+    title: welcome
+    content: |
+      welcome
+      scope: 3 types of models: Linear, Tree based, Neural networks
+      using LLMs in the course
+      evaluation
+      student get to know, questionnaire
+
+  Introduction:
+    title: Introduction to ML
+    content: |
+      Cycle of a data science project
+      What is the concept of teaching a computer using data: what is machine learning,
+        the sqrt(2) example,
+        vocabulary: model, inference, training,
+      Applications of Machine Learning: nature of data, multimodality,
+      Stats vs Machine Learning: explanation vs inference
+        - illustrate with questions: find factors influencing vs predicting; understanding vs inference; ex users click on website
+        - back box: interpretability, recruitment, credit
+      Supervised vs non-supervised, ground truth data
+      Regression, Classification, and Clustering
+      Choosing the right Metric, scoring
+      The importance of Benchmarking
+      It's all about the data: [UCI ML](https://en.wikipedia.org/wiki/University_of_California,_Irvine#Machine_Learning_Repository) repo (1978), tabular
+      Kaggle competitions: titanic, boston housing
+    Demo: single tree with sklearn DecisionTreeClassifier on Iris, accuracy
+    Practice: same on penguins, accuracy, colab notebook, accuracy
+    quizz:
+
+  Project:
+    title: student project,
+    desc:
+      find a dataset on UCI ML repo, explore data, choose a target, train multiple models,
+      fine tuning strategy
+      demo perf
+      includes github or notebook,
+      presentation, last session
+      fill spreadsheet
+      group work
+      the more complex the better, challenge yourselves
+
+  Linear regression statistic:
+    title: Linear Regression - statistic - statsmodel
+    Content: |
+      Simple Example: weight ~ age, height, ... ; advertising
+      Applications of linear regression
+      linearly separable data (y ~ x^2 => not linearly separable)
+      LR as statistic modeling: understanding the dynamic of variables
+      LR as machine learning: training a model for inference
+      Interpretation of statistical LR (statsmodl): R^2, AIC, ...
+      normalization
+      Hypothesis: indep of resiuduals, heteroskedasticity, ...
+      feature engineering and polynomial regression
+      Explainability: not a black box model, useful for credit rating and other applications
+    demo: advertising
+    practice: children, stats model
+    ref: https://www.statlearning.com/
+
+  Linear regression machine learning:
+    title: Linear Regression - machine learning - sklearn
+    context: |
+      sklearn overview: model, fit, predict, score, random state
+      keep some data aside for validation
+      design matrix, target variable
+      Bias variance, overfitting
+      K-fold cross validation
+      Model performance evaluation (overfitting, bias-variance, crossfolding, ...)
+      Regression metrics RMSE, MAE, MAPE, etc, absolute and relative
+    demo: children weights; advertising; other
+      https://github.com/OpenClassrooms-Student-Center/8063076-Initiez-vous-au-Machine-Learning/blob/master/notebooks/P2C1_%C3%A9tapes_de_construction_modele_predictif.ipynb
+      polynomial regression for overfitting demo
+      https://github.com/OpenClassrooms-Student-Center/8063076-Initiez-vous-au-Machine-Learning/blob/master/notebooks/P4C2_robustesse_modele.ipynb
+
+    practice: other; maybe artificial ?
+      compare different regression models on children data https://github.com/OpenClassrooms-Student-Center/8063076-Initiez-vous-au-Machine-Learning/blob/master/notebooks/P2C2_principe_regression_lineaire.ipynb
+
+  Pandas dataframes and data engineering:
+    title: feature engineering with pandas
+    content: |
+      exploring : describe, info and correlation
+      clean data:
+        nulls and missing values,
+        encoding categorical data
+        outliers
+      python:
+        avoiding loops with comprehensions
+        creating new features with lambdas
+      merging, concatenating
+      looping through data, the list of dict to panda conversion
+    demo: some noisy dataset (trees ?), do some tasks
+      https://github.com/OpenClassrooms-Student-Center/8063076-Initiez-vous-au-Machine-Learning/blob/master/notebooks/P3C2_ameliorer_dataset.ipynb
+      https://github.com/OpenClassrooms-Student-Center/8063076-Initiez-vous-au-Machine-Learning/blob/master/notebooks/P3C3_transformer_categories.ipynb
+      compare with Gemini
+    practice: some other dataset, other transformations, ADEME
+
+  Logistic regression:
+    title: LR for classification
+    content: |
+      How it works: logit function f(y) = 1 / (1 + e^(-y)) + probability interpretation
+      Classification metrics, confusion matrix, Recall, AUC, etc ...
+      Importance of threshold
+      probability histogram
+      encoding categorical data, curse of dimension
+      multiclass classification
+      no free lunch
+    demo: iris, penguins, breast cancer
+    practice: titanic on kaggle, cancer dataset,
+      https://github.com/OpenClassrooms-Student-Center/8063076-Initiez-vous-au-Machine-Learning/blob/master/notebooks/P2C3_regression_logistique_classification.ipynb
+      https://github.com/OpenClassrooms-Student-Center/8063076-Initiez-vous-au-Machine-Learning/blob/master/notebooks/P3C1_creer_dataset.ipynb
+
+  Stochastic Gradient:
+    title: the building block of today's AI
+    content: |
+      Sqrt(2): Loss function, error, learning rate, https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Heron's_method
+        write in python, add estimation error, RMSE as error instead of abcolute value
+      L1, L2
+      what converges better ?
+      gradient descent
+      tuning the learning rate
+      tuning the batch size
+      overfitting
+      regularization: L1, L2, ..., lasso
+      https://www.analyticsvidhya.com/blog/2016/01/ridge-lasso-regression-python-complete-tutorial/
+      https://www.kaggle.com/code/jonasschroeder/regularization-examples-ridge-lasso-l1-l2
+    demo: titanic
+    practice: |
+      space titanic https://github.com/tdpreston/Space-Titanic
+
+  Cost Function and models:
+    title: going from one model to the other by changing the loss function
+    content: |
+      how to choose a model: https://scikit-learn.org/stable/machine_learning_map.html
+      Generalized Linear Model (GLM)
+      main loss functions
+      why the loss function dictates the model
+      examples
+    demo: find a model that uses different loss ufnctions
+
+  Perceptron:
+    title: from stochastic gradient to neural networks
+    content: |
+      the perceptron, single cell, with logit activation function and sign based updates
+      activation functions
+      backpropagation
+      multi layer perceptron
+      tensorflow, pytorch, jax
+      image classification
+    demo: cats and dogs
+    practice: spectrograms of sound ?
+
+  Unsupervised:
+    title: no ground truth
+    content: |
+      dimension reduction, PCA
+      K-means, Nearest Neighbors, variants
+      silhouette score
+
+  Trees:
+    title: decision trees
+    content: |
+      depth, leaves,
+      Gini impurity, entropy, and information gain
+      left unconstrained the tree always overfit
+    demo: trees on iris
+      tuning depth to avoid overfitting https://github.com/OpenClassrooms-Student-Center/8063076-Initiez-vous-au-Machine-Learning/blob/master/notebooks/P4C1_biais_overfit.ipynb
+    practice: trees on simple classification
+      tune some other parameters to avoid overfitting
+
+  Random Forest:
+    title: bagging and boosting decision trees
+    content: |
+      weak learner
+      bagging
+      impact on overfitting and biais
+    demo: manual averaging of trees; bagging linear regression
+      https://github.com/OpenClassrooms-Student-Center/8063076-Initiez-vous-au-Machine-Learning/blob/master/notebooks/P4C3_apprentissage_ensemble.ipynb
+    practice:
+      - tune a random forest
+
+  XGBoost:
+    title: boosting decision trees
+    content: |
+      boosting
+      Different flavors of XGBoost
+      comparison of meta parameters
+    practice:
+      - tune a XGBoost
+
+  other: unknows
+    ------
+    ------
+    ------
+# 3. Logistic Regression
+#     •   Introduction to classification
+#     •    Different classification methods
+#     •    Single class classification
+#     •    Multiclass classification
+#     •    Cost Function
+#     •    Decision boundaries
+#     •    Model performance evaluation (overfitting, bias-variance, crossfolding, ...)
+# 4. Feed-forward Neural Networks
+#     •   The simple perceptron
+#     •   Weighted connections
+#     •   Forward Propagation
+#     •   Back Propagation (derivation, cost function...)
+#     •    Activation functions
+# 5. Unsupervised machine learning
+#     •   K-means Clustering
+# 6. Decision trees
+#     •    Simple classification trees
+#     •    Gini impurity, entropy, and information gain
+#     •    Bagging & Boosting
+#     •    Random forest, adaBoost/Gradient Boost
+#     •    Imbalanced Datasets
+
+# Prerequisites
+# Linear algebra, probability calculus, matrix analysis, and programming
+# Learning Outcomes
+# At the end of this course, students will be able to :
+#     •  Understand machine learning and its applications
+#     •  Learn the basic algorithms of Machine Learning
+#     •  Learn to use Python: a powerful programming language to apply ML
+#     •  Learn to implement several Machine Learning algorithms (from scratch) using Python
+#     •  Learn to build machine learning systems (ML Model) with concrete examples
+#     •  Learn to analyze the results of an ML model, to deduce conclusions, and to improve it
+#     •  Describe mathematically the problems to be solved and solve them algorithmically.
