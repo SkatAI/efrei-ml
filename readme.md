@@ -1,10 +1,11 @@
 # Machine learning (ST2MML)
 
-EFREI - International - Winter 2025
+EFREI - International - Winter 2025 - English
 
 Units: M1-NEW
 
 Data Science and Artificial Intelligence
+
 
 # Scope
 
