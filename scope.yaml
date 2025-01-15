@@ -5,6 +5,7 @@ course:
 
   Launch:
     title: welcome
+    format: slides
     content: |
       welcome
       scope: 3 types of models: Linear, Tree based, Neural networks
@@ -12,8 +13,10 @@ course:
       evaluation
       student get to know, questionnaire
 
-  Introduction:
+  Introduction to ML:
     title: Introduction to ML
+    format: markdown, pdf
+    file: docs/S02.01-intro-ml.md
     content: |
       Cycle of a data science project
       What is the concept of teaching a computer using data: what is machine learning,
@@ -29,9 +32,21 @@ course:
       The importance of Benchmarking
       It's all about the data: [UCI ML](https://en.wikipedia.org/wiki/University_of_California,_Irvine#Machine_Learning_Repository) repo (1978), tabular
       Kaggle competitions: titanic, boston housing
-    Demo: single tree with sklearn DecisionTreeClassifier on Iris, accuracy
-    Practice: same on penguins, accuracy, colab notebook, accuracy
-    quizz:
+
+  hands on with sklearn:
+    goal: work on iris with a classifier
+    format: slides
+    content: |
+      struture of a notebook, example on iris
+        - load data (always use pandas and csv)
+        - explore data: min, avg, percentiles, missing, categories, correlation, ...
+        - transform data: clean, encode, engineer
+        - choose sklearn model (start with logistic regression and linear regression to get a benchmark)
+        - build X and y (design matrix and target)
+        - train the model (fit)
+        - evaluate the score
+      then get on colab
+      and start coding
 
   Project:
     title: student project,
