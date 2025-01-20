@@ -1,3 +1,12 @@
+# 07/02/2025 ven 09:10 13:40 04:30
+# 14/02/2025 ven 09:10 12:30 03:20
+# 21/02/2025 ven 09:10 12:30 03:20
+# 07/03/2025 ven 09:10 12:30 03:20
+# 11/03/2025 mar 08:00 12:30 04:30
+# 14/03/2025 ven 09:10 12:30 03:20
+# 17/03/2025 lun 13:50 18:20 04:30
+# 18/03/2025 mar 13:50 18:20 04:30
+
 course:
   title: ST2MML
   lang: english
@@ -33,7 +42,7 @@ course:
       It's all about the data: [UCI ML](https://en.wikipedia.org/wiki/University_of_California,_Irvine#Machine_Learning_Repository) repo (1978), tabular
       Kaggle competitions: titanic, boston housing
 
-  hands on with sklearn:
+  Hands on with sklearn:
     goal: work on iris with a classifier
     format: slides
     content: |
