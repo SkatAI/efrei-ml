@@ -10,7 +10,7 @@ wip/
 *.pkl
 *.log
 *.tar.gz
-*.zip
+# *.zip
 
 # Ignored Python Files
 __pycache__/
