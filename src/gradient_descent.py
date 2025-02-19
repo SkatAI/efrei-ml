@@ -49,4 +49,3 @@ plt.title("function x^4 - 3 x^3 in [0, 3.5]")
 plt.show()
 
 
-
